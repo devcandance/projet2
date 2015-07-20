@@ -15,13 +15,14 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('post_id')->unsigned()->nullable();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->string('email', 50)->nullable();
             $table->text('message');
             $table->enum('status', ['publish', 'unpublish'])->default('unpublish');
             $table->enum('spam', ['spam', 'no-spam'])->default('no-spam'); //Akismet
-            $table->timestamps();
-            $table->foreign('post_id')->references('id')->on('posts')->onDelete('CASCADE');
+            // $table->foreign('post_id')->references('id')->on('posts')->onDelete('CASCADE');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
+            $table->timestamps();
         });
     }
 

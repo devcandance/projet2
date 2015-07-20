@@ -13,7 +13,7 @@ class CommentTableSeeder extends Seeder
     {
         DB::table('comments')->delete();
 
-        DB::statement('ALTER TABLE posts AUTO_INCREMENT=1');
+        DB::statement('ALTER TABLE comments AUTO_INCREMENT=1');
 
         DB::table('comments')->insert([
             [
