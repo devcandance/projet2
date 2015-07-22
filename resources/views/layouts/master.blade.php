@@ -18,9 +18,9 @@
 
         <h1 class="title"><a href="{{url('/')}}">Ceci n'est pas un Blog</a></h1>
 
-        <nav>
-            @include('partials.menu')
-        </nav>
+        <!--nav>
+            {{--@include('partials.menu')--}}
+        </nav-->
 
     </header>
 </div>

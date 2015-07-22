@@ -20,7 +20,7 @@ class CreateCommentsTable extends Migration
             $table->text('message');
             $table->enum('status', ['publish', 'unpublish'])->default('unpublish');
             $table->enum('spam', ['spam', 'no-spam'])->default('no-spam'); //Akismet
-            // $table->foreign('post_id')->references('id')->on('posts')->onDelete('CASCADE');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('CASCADE');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->timestamps();
         });
