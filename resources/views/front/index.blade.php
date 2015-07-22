@@ -14,7 +14,6 @@
                 <article class="post" >
 
                     <header>
-                        <!--h1><a href="{{--url('single/'.$post->id)}}">{{$post->title--}}</a></h1-->
                         <h1><a href="{{url('single/', [$post->id, $post->slug])}}">{{$post->title}}</a></h1>
                     </header>
 

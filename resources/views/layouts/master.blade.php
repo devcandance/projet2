@@ -3,7 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta content="conférence PHP" name="description">
+    <meta content="Antoine AFUP" name="author">
+    <meta content="Paris, France" name="geo.placename">
+
     <title>@yield('title')</title>
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="assets/style.css" >
+
+    <link rel="stylesheet" href="{{asset('assets/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/main.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/app.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/skeleton.min.css')}}"/>
@@ -18,9 +29,9 @@
 
         <h1 class="title"><a href="{{url('/')}}">Ceci n'est pas un Blog</a></h1>
 
-        <!--nav>
-            {{--@include('partials.menu')--}}
-        </nav-->
+        <nav>
+            @include('partials.menu')
+        </nav>
 
     </header>
 </div>

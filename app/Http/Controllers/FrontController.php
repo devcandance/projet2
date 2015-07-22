@@ -28,11 +28,11 @@ class FrontController extends Controller
     {
         $post = Post::all()->where('status', 'publish')->first();
         return view('front.single', compact('post'));
-    }
+    }*/
 
     public function showTag($id)
     {
         $tag = Tag::find($id)->posts();
         return view('front.tag', compact('posts'));
-    }*/
+    }
 }

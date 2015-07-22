@@ -26,7 +26,7 @@ Route::pattern('id', '[1-9][0-9]*');
 
 Route::get('/', 'FrontController@index');
 // Route::get('single/{id}/{slug?}', 'FrontController@showPost');
-// Route::get('tag/{id}', 'FrontController@showTag');
+Route::get('tag/{id}', 'FrontController@showTag');
 
 Route::get('/user', 'UserController@index');
 Route::get('/user/{id}', 'UserController@show');
@@ -45,14 +45,14 @@ Route::controllers([
                    Dashboard
 \* -------------------------------------------- */
 
-Route::get('dashboard', 'Admin\DashboardController@index');
+// Route::get('dashboard', 'Admin\DashboardController@index');
 
 
 /* -------------------------------------------- *\
                 Controllers REST
 \* -------------------------------------------- */
 
-Route::resource('comment', 'CommentController');
+// Route::resource('comment', 'CommentController');
 Route::resource('post', 'PostController');
 
 
