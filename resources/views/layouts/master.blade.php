@@ -12,6 +12,10 @@
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
     <link rel="stylesheet" href="{{asset('assets/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/main.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/app.min.css')}}"/>
@@ -22,38 +26,31 @@
 
 <body>
 
-<div class="header-container">
-    <header class="wrapper clearfix" id="banner" role="banner">
+    <div class="header-container">
+        <div class="wrapper clearfix">
             @include ('front.includes.header')
-    </header>
-</div>
-
-<div class=main-container">
-    <div class="main wrapper clearfix">
-
-        <section>
-            @yield('content')
-        </section>
-
-        <aside>
-            @section('sidebar')
-                <h1>Sidebar</h1>
-                <ul>
-                    <li><a href="{{url('student')}}">tous les students</a></li>
-                </ul>
-            @show
-        </aside>
-
+        </div>
     </div>
-</div>
 
-<div class="footer-container">
-    <footer class="wrapper">
-        <ul>
-            <li><a href="#">mentions légales</a></li>
-        </ul>
-    </footer>
-</div>
+    <div class=main-container">
+        <div class="main wrapper clearfix">
+            <section>
+                @yield('content')
+            </section>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix">
+            @include ('front.includes.sidebar')
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <aside class="wrapper">
+            @include('front.includes.footer')
+        </aside>
+    </div>
 
 </body>
 

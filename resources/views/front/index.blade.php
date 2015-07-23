@@ -2,11 +2,6 @@
 
 @section('title', 'Welcome User')
 
-@section('sidebar')
-    @parent
-    <p>PostHome Sidebar</p>
-@endsection
-
 @section('content')
     @if($posts)
         <section id="main">
@@ -28,13 +23,6 @@
                     @else
                         <p>'anonymous'</p>
                     @endif
-
-                    <!--div class="tags">
-                        <h2>Tags:</h2>
-                        {{--@foreach($post->tags as $tag)
-                            <span class="tag">{{$tag->name}}</span>
-                        @endforeach--}}
-                    </div-->
 
                 </article>
             @endforeach
