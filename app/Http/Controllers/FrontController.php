@@ -24,10 +24,9 @@ class FrontController extends Controller
         return view('front.single', compact('post'));
     }
 
-    /**
-     * public function showTag($id)
+    public function showTag($id)
     {
         $tag = Tag::find($id)->posts();
         return view('front.tag', compact('posts'));
-    }*/
+    }
 }
