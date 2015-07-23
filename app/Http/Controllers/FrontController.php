@@ -12,19 +12,20 @@ use App\Http\Controllers\Controller;
 
 class FrontController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $posts = Post::all();
-        return view('front.index', compact('posts'));
+        return view('post.index', compact('posts'));
     }
 
-    /**
-     * public function showPost($id)
+    public function showPost($id)
     {
         $post = Post::all()->where('status', 'publish')->first();
         return view('front.single', compact('post'));
     }
 
-    public function showTag($id)
+    /**
+     * public function showTag($id)
     {
         $tag = Tag::find($id)->posts();
         return view('front.tag', compact('posts'));

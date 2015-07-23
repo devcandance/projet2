@@ -25,7 +25,7 @@ Route::pattern('id', '[1-9][0-9]*');
 
 
 Route::get('/', 'FrontController@index');
-// Route::get('single/{id}/{slug?}', 'FrontController@showPost');
+Route::get('single/{id}/{slug?}', 'FrontController@showPost');
 // Route::get('tag/{id}', 'FrontController@showTag');
 
 Route::get('/user', 'UserController@index');

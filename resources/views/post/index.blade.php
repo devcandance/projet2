@@ -1,49 +1,40 @@
-@extends('layouts.admin')
+@extends('layouts.master')
 
-@section('title', 'Admin post')
+@section('title', 'Welcome User')
 
 @section('content')
-    <p><a href="{{url('post/create')}}">create</a></p>
 
+    @if($posts)
+        <div id="main" role="main">
+            <section id="post" >
 
-    @if(count($posts)>0)
+                @foreach($posts as $post)
+                    <article class="news" >
 
-        <table class="u-full-width">
+                        <header>
+                            <h2>
+                                <a href="{{url('single/', [$post->id, $post->slug])}}" class="link-post">{{$post->title}}</a>
+                            </h2>
+                        </header>
 
-            <thead>
-            <tr>
-                <th>title</th>
-                <th>edit</th>
-                <th>delete</th>
-            </tr>
-            </thead>
+                        @if($post->thumbnail_link)
+                            <div class="thumbnail">
+                                <img src="{{url('upload', [$post->thumbnail_link])}}" alt=""/>
+                            </div>
+                        @endif
 
-            <tbody>
-            @foreach($posts as $post)
-                <tr>
-                    <td>{{$post->title}}</td>
+                        @if($post->user)
+                            <a href="{{url('user/' . $post->user->id)}}">{{$post->user->name}}</a>
+                        @else
+                            <p>'le post est anonyme'</p>
+                        @endif
 
-                    <td>
-                        <button>
-                            <a href="{{url('post/'. $post->id)}}">EDIT</a>
-                        </button>
-                    </td>
-
-                    <td>
-                        {!! Form::open(['url'=>'post/'.$post->id, 'method'=>'DELETE', 'class'=>'form']) !!}
-                        {!! Form::submit('delete', ['class'=>'button-delete button-primary'])  !!}
-                        {!! Form::close() !!}
-                    </td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
-
+                    </article>
+                @endforeach
+            </section>
+        </div>
     @else
-        <p>désolé pas de contenu du tout du tout !</p>
-        @endif
+        <p>Désolé pas d'article actuellement</p>
 
-
-        </table>
-
+    @endif
 @endsection

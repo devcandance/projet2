@@ -34,9 +34,9 @@
 
     <div class=main-container">
         <div class="main wrapper clearfix">
-            <section>
+            <div id="main" role="main">
                 @yield('content')
-            </section>
+            </div>
         </div>
     </div>
 
