@@ -12,8 +12,6 @@
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="assets/style.css" >
-
     <link rel="stylesheet" href="{{asset('assets/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/main.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/app.min.css')}}"/>
@@ -25,14 +23,8 @@
 <body>
 
 <div class="header-container">
-    <header class="wrapper clearfix">
-
-        <h1 class="title"><a href="{{url('/')}}">Ceci n'est pas un Blog</a></h1>
-
-        <nav>
-            @include('partials.menu')
-        </nav>
-
+    <header class="wrapper clearfix" id="banner" role="banner">
+            @include ('front.includes.header')
     </header>
 </div>
 

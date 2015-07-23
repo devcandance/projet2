@@ -18,21 +18,15 @@ class FrontController extends Controller
     }
 
     /**
-     * public function showPostByCategory($id)
-    {
-        $posts = Category::find($id)->posts()->published()->get();
-        return view('front.category', compact('posts'));
-    }
-
-    public function showPost($id)
+     * public function showPost($id)
     {
         $post = Post::all()->where('status', 'publish')->first();
         return view('front.single', compact('post'));
-    }*/
+    }
 
     public function showTag($id)
     {
         $tag = Tag::find($id)->posts();
         return view('front.tag', compact('posts'));
-    }
+    }*/
 }

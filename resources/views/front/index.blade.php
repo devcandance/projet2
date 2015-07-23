@@ -29,12 +29,12 @@
                         <p>'anonymous'</p>
                     @endif
 
-                    <div class="tags">
+                    <!--div class="tags">
                         <h2>Tags:</h2>
-                        @foreach($post->tags as $tag)
+                        {{--@foreach($post->tags as $tag)
                             <span class="tag">{{$tag->name}}</span>
-                        @endforeach
-                    </div>
+                        @endforeach--}}
+                    </div-->
 
                 </article>
             @endforeach
