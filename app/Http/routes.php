@@ -20,13 +20,13 @@ Route::pattern('id', '[1-9][0-9]*');
 // permet de vérifier que les valeurs qui passent en url sont des entiers qui ne peuvent PAS commencer par "0"
 
 /*----------------------------------------------*\
-                     Front
+                     Blog
 \* -------------------------------------------- */
 
 
-Route::get('/', 'FrontController@index');
-Route::get('single/{id}/{slug?}', 'FrontController@showPost');
-Route::get('tag/{id}', 'FrontController@showTag');
+Route::get('/', 'BlogController@index');
+Route::get('single/{id}/{slug?}', 'BlogController@showPost');
+Route::get('tag/{id}', 'BlogController@showTag');
 
 Route::get('/user', 'UserController@index');
 Route::get('/user/{id}', 'UserController@show');

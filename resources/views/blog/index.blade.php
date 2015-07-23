@@ -25,27 +25,42 @@
                             </div>
                         @endif
 
-                        @if($post->user)
+                        @if($post->excerpt)
+                            <p class="abstract">{{$post->excerpt}}</p>
+                            <a href="{{url('single/', [$post->id, $post->slug])}}" class="link-post">Lire la suite...</a>
+                            <br />
+                        @endif
+
+                        @if($post->url_site)
+                            <br />
+                            <a href="{{url('link/' . $post->user->id)}}" class="link-outside">Site web de la conférence</a>
+                        @endif
+
+                        @if($post->date_start)
+                            <br />
+                            <h3 class="date">début: {{$post->date_start}} fin: {{$post->date_end}}</h3>
+                        @endif
+
+                        <br />
+
+                        {{--@if($post->user)
                             <a href="{{url('user/' . $post->user->id)}}">{{$post->user->name}}</a>
                         @else
                             <p>'le post est anonyme'</p>
-                        @endif
+                        @endif--}}
 
-                        @if($post->tag)
-                            <div class="tags">
-                                <h2>Tags:</h2>
-                                @foreach($post->tags as $tag)
-                                    <span class="tag">{{$tag->name}}</span>
-                                @endforeach
-                            </div>
-                        @endif
+                        <div class="link-keyword">Mots clefs :
+                            @foreach($post->tags as $tag)
+                                <a href="{{url('tag/'.$tag->id)}}">{{ucfirst($tag->name)}}</a>
+                            @endforeach
+                        </div>
 
                     </article>
                 @endforeach
             </section>
         </div>
     @else
-        <p>Pas pas de post</p>
+    <p>Pas de post</p>
 
     @endif
 @endsection
