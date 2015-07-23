@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd434058-975c-419f-aa75-674dd4513e9f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/images/confs/laravel_amsterdam2014.jpg" afterPath="$PROJECT_DIR$/public/upload/laravel_amsterdam2014.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/images/confs/rasmusLerdorf.jpg" afterPath="$PROJECT_DIR$/public/upload/rasmusLerdorf.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/images/confs/symfony_london.png" afterPath="$PROJECT_DIR$/public/upload/symfony_london.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/images/confs/symfony_madrid.png" afterPath="$PROJECT_DIR$/public/upload/symfony_madrid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/upload/laravel_amsterdam2014.jpg" afterPath="$PROJECT_DIR$/public/upload_thumb/laravel_amsterdam2014.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/upload/rasmusLerdorf.jpg" afterPath="$PROJECT_DIR$/public/upload_thumb/rasmusLerdorf.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/upload/symfony_london.png" afterPath="$PROJECT_DIR$/public/upload_thumb/symfony_london.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/upload/symfony_madrid.png" afterPath="$PROJECT_DIR$/public/upload_thumb/symfony_madrid.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/logos/Elephpant.png" afterPath="$PROJECT_DIR$/public/assets/images/logos/Elephpant.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/logos/elao_logo_150px.png" afterPath="$PROJECT_DIR$/public/assets/images/logos/elao_logo_150px.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/logos/logo-large.png" afterPath="$PROJECT_DIR$/public/assets/images/logos/logo-large.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/images/logos/zol-logo.png" afterPath="$PROJECT_DIR$/public/assets/images/logos/zol-logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/post/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/post/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/includes/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/includes/sidebar.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="projet2.iws" />
@@ -82,8 +81,8 @@
       <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/front/includes/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0769231" vertical-offset="0" max-vertical-offset="216">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state vertical-scroll-proportion="-4.1538463" vertical-offset="0" max-vertical-offset="216">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -102,8 +101,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/post/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3379224" vertical-offset="0" max-vertical-offset="810">
-              <caret line="15" column="86" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.58573216" vertical-offset="0" max-vertical-offset="846">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -181,11 +180,11 @@
         <option value="$PROJECT_DIR$/resources/views/front/partials/menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/front/includes/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/front/includes/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/front/includes/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/front/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/includes/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/post/index.blade.php" />
       </list>
     </option>
@@ -448,7 +447,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
+              <option name="myItemId" value="upload_thumb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -489,6 +488,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -730,11 +733,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/upload_logos" />
       <recent name="$PROJECT_DIR$/public/asset" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/vendor" />
       <recent name="$PROJECT_DIR$/app/Http/Requests" />
-      <recent name="$PROJECT_DIR$/resources/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
@@ -866,7 +869,13 @@
       <option name="project" value="LOCAL" />
       <updated>1437639492841</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="commit accueil">
+      <created>1437644963400</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1437644963400</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -881,7 +890,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31805557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31805557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -918,7 +927,8 @@
     <MESSAGE value="commit assets" />
     <MESSAGE value="commit bdd ok - index.blade" />
     <MESSAGE value="commit bdd ok - blades" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit bdd ok - blades" />
+    <MESSAGE value="commit accueil" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit accueil" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1283,22 +1293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/includes/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.923077" vertical-offset="0" max-vertical-offset="288">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/includes/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0769231" vertical-offset="0" max-vertical-offset="216">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.346154" vertical-offset="299" max-vertical-offset="1116">
@@ -1315,10 +1309,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/includes/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1538463" vertical-offset="0" max-vertical-offset="216">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/includes/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.923077" vertical-offset="0" max-vertical-offset="288">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/post/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3379224" vertical-offset="0" max-vertical-offset="810">
-          <caret line="15" column="86" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.58573216" vertical-offset="0" max-vertical-offset="846">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>

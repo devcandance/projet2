@@ -19,7 +19,9 @@
 
                         @if($post->thumbnail_link)
                             <div class="thumbnail">
-                                <img src="{{url('upload', [$post->thumbnail_link])}}" alt=""/>
+                                <a href="{{url('single/', [$post->id, $post->slug])}}" class="link-post">
+                                    <img src="{{url('upload_thumb', [$post->thumbnail_link])}}" alt=""/>
+                                </a>
                             </div>
                         @endif
 
@@ -34,7 +36,7 @@
             </section>
         </div>
     @else
-        <p>Désolé pas d'article actuellement</p>
+        <p>Pas pas de post</p>
 
     @endif
 @endsection
