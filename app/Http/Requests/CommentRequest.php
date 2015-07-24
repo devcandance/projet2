@@ -25,7 +25,8 @@ class CommentRequest extends Request
     {
         return [
             'email' => 'required|email',
-            'content' => 'required',
+            'message' => 'required',
+            'post_id' => 'required'
         ];
     }
 }

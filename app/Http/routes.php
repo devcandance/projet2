@@ -28,8 +28,8 @@ Route::get('/', 'BlogController@index');
 Route::get('single/{id}/{slug?}', 'BlogController@showPost');
 Route::get('tag/{id}', 'BlogController@showTag');
 
-Route::get('/user', 'UserController@index');
-Route::get('/user/{id}', 'UserController@show');
+// Route::get('/user', 'UserController@index');
+// Route::get('/user/{id}', 'UserController@show');
 
 
 /* -------------------------------------------- *\
@@ -45,7 +45,7 @@ Route::controllers([
                    Dashboard
 \* -------------------------------------------- */
 
-// Route::get('dashboard', 'Admin\DashboardController@index');
+Route::get('dashboard', 'Admin\DashboardController@index');
 
 
 /* -------------------------------------------- *\

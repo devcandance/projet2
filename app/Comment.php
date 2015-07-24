@@ -9,7 +9,7 @@ class Comment extends Model
     protected $fillable=[
         'email',
         'message',
-        'status',
+        'post_id'
     ];
 
     public function user()
@@ -17,7 +17,7 @@ class Comment extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function post()
+    public function posts()
     {
         return $this->belongsTo('App\Post');
     }

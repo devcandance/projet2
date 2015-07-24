@@ -21,18 +21,21 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::all();
-        return view('post.index', compact('posts'));
+        $posts = Post::all(); // filtre publish/unplish ?
+        //$tags = Tag::all();
+        return view('post.index', compact('posts', 'tags'));
     }
 
 
-    public function show($id)
+    /**
+     * public function show($id)
     {
         $post = Post::find($id);
         return view('post.single', compact('post'));
-    }
+    }*/
 
-    public function create()
+    /**
+     * public function create()
     {
         $categories = Category::all();
         return view('post.create', compact('categories'));
@@ -57,5 +60,5 @@ class PostController extends Controller
         // Post::create($request->all());
 
         return redirect()->to('post')->with('message', 'success');
-    }
+    }*/
 }

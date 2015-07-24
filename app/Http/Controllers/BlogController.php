@@ -10,22 +10,23 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Comment;
 
 class BlogController extends Controller
 {
     public function index()
     {
         $posts = Post::all();
-        $tags = Tag::all();
+        //$tags = Tag::all();
         return view('blog.index', compact('posts', 'tags'));
     }
 
-    /**
-     * public function showPost($id)
+    public function showPost($id)
     {
-        $post = Post::all()->where('status', 'publish')->first();
-        return view('blog.single', compact('post'));
-    }*/
+        $post = Post::find($id);
+        $comments = Comment::whereRaw('status = ? AND post_id = ?', ['publish', (int)$id])->get();
+        return view('blog.single', compact('post', 'comments'));
+    }
 
     /**
      * public function showTag($id)
@@ -33,8 +34,11 @@ class BlogController extends Controller
         $tag = Tag::find($id)->posts();
         return view('blog.tag', compact('tag'));
     }*/
+
+    /**
+     * public function showComment($id)
+    {
+        $comment = Comment::find($id)->posts();
+        return view('blog.comment', compact('comment'));
+    }*/
 }
-
-
-// $user = DB::table('users')->where('name', 'John')->first();
-// var_dump($user->name);

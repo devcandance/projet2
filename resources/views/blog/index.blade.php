@@ -32,16 +32,9 @@
                         @endif
 
                         @if($post->url_site)
-                            <br />
+                                <br />
                             <a href="{{url('link/' . $post->user->id)}}" class="link-outside">Site web de la conférence</a>
                         @endif
-
-                        @if($post->date_start)
-                            <br />
-                            <h3 class="date">début: {{$post->date_start}} fin: {{$post->date_end}}</h3>
-                        @endif
-
-                        <br />
 
                         {{--@if($post->user)
                             <a href="{{url('user/' . $post->user->id)}}">{{$post->user->name}}</a>
@@ -51,9 +44,16 @@
 
                         <div class="link-keyword">Mots clefs :
                             @foreach($post->tags as $tag)
-                                <a href="{{url('tag/'.$tag->id)}}">{{ucfirst($tag->name)}}</a>
+                                <a href="{{url('tag/'. $tag->id)}}">{{$tag->name}}</a>
                             @endforeach
                         </div>
+
+
+                        @if($post->date_start)
+                            <br />
+                            <h3 class="date">début: {{$post->date_start}} fin: {{$post->date_end}}</h3>
+                        @endif
+
 
                     </article>
                 @endforeach

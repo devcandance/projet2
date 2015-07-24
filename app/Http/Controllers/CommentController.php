@@ -11,11 +11,12 @@ use phpDocumentor\Reflection\DocBlock\Tag\ReturnTag;
 
 class CommentController extends Controller
 {
-    public function __construct()
+    /**
+     * public function __construct()
     {
         parent::__construct();
         $this->middleware('auth', ['except'=>'show']);
-    }
+    }/*
 
     /**
      * Display a listing of the resource.
@@ -25,7 +26,6 @@ class CommentController extends Controller
     public function index()
     {
         $comments = Comment::all();
-
         $title = 'Liste des comment';
         return view('comment.index', compact('comments', 'title'));
     }
