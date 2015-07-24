@@ -21,8 +21,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::all(); // filtre publish/unplish ?
-        //$tags = Tag::all();
+        $posts = Post::all();
         return view('post.index', compact('posts', 'tags'));
     }
 

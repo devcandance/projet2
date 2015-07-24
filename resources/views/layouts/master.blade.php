@@ -17,11 +17,6 @@
     <![endif]-->
 
     <link rel="stylesheet" href="{{asset('assets/style.css')}}"/>
-    <link rel="stylesheet" href="{{asset('assets/css/main.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('assets/css/app.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('assets/css/skeleton.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('assets/js/vendor/jquery-1.11.3.min.js')}}"/>
-    <link rel="stylesheet" href="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"/>
 </head>
 
 <body>

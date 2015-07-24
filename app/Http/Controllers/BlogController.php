@@ -17,8 +17,8 @@ class BlogController extends Controller
     public function index()
     {
         $posts = Post::all();
-        //$tags = Tag::all();
-        return view('blog.index', compact('posts', 'tags'));
+        $comments = Comment::all();
+        return view('blog.index', compact('posts', 'comments'));
     }
 
     public function showPost($id)
