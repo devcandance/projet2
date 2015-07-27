@@ -26,7 +26,7 @@
                             <br />
 
                                 <p>
-                                    <a href="{{url('link/' . $post->url_site)}}" class="link-outside">Site web de la conférence</a>
+                                    <a href="{{url($post->url_site)}}" class="link-outside">Site web de la conférence</a>
                                 </p>
 
                             <div class="link-keyword">Mots clefs :
@@ -88,10 +88,6 @@
 
                 </aside>
             </div>
-        @else
-
-            <p>Toujours pas de contenu</p>
-
         @endif
     </div>
 @endsection

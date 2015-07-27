@@ -16,11 +16,6 @@
                 {!! Form::email('email', old('email'), ['id'=>'id_de_l_email', 'placeholder'=>'Votre email', 'required']) !!}
                 {!! $errors->first('email', '<span class="help-block">: message</span>') !!}
             </p>
-
-            <p>
-                {!!Form::label('nospam', 'Combien font 34+43',['for'=> 'antispam'])!!}
-                {!!Form::text('nospam', '', ['class'=>'form-control', 'id'=>'antispam', 'require'])!!}
-            </p>
         </div>
 
         <h3>
@@ -37,4 +32,3 @@
     </aside>
 
 @endsection
-@yield('aside')

@@ -33,7 +33,7 @@
 
                         @if($post->url_site)
                                 <br />
-                            <a href="{{url('link' . $post->user->id)}}" class="link-outside">Site web de la conférence</a>
+                            <a href="{{url($post->url_site)}}" class="link-outside">Site web de la conférence</a>
                         @endif
 
                         <div class="link-keyword">Mots clefs :

@@ -9,7 +9,7 @@
     <a href="http://www.jolicode.com/">
         <img class="logo" src="assets/images/logos/logo-large.png" />
     </a>
-    <a href="http://www.http://php.net/">
+    <a href="http://www.php.net/">
         <img class="logo" src="assets/images/logos/Elephpant.png" />
     </a>
 </section>
