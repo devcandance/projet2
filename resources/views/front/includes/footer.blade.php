@@ -1,7 +1,7 @@
 <footer id="footer">
     <nav>
-        <a  href="#">Accueil</a>
-        <a  href="#">Mentions légales</a>
-        <a  href="#">Contact</a>
+        <a  href="{{url('/')}}">Accueil</a>
+        <a  href="{{url('/')}}">Mentions légales</a>
+        <a  href="{{url('/')}}">Contact</a>
     </nav>
 </footer>

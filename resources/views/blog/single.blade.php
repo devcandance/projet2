@@ -1,8 +1,9 @@
 @extends('layouts.master')
 
-@section('title', 'Welcome post\'s page')
+@section('title', 'Bienvenue sur une page de posts')
 
 @section('content')
+
     <div class="post">
         @if($post)
             <div id="main" role="main">
@@ -40,18 +41,15 @@
                 </section>
 
                 <section>
-                    @if($comments)
-                        @foreach($comments as $c)
-                            <ul>
+                    @if($post->comments)
+                        <ul>
+                        @foreach($post->comments as $c)
                                 <li>
                                     <h2>{{$c->email}}</h2>
-                                </li>
-
-                                <li>
                                     <p>{{$c->message}}</p>
                                 </li>
-                            </ul>
                         @endforeach
+                        </ul>
                     @endif
                 </section>
 
@@ -81,7 +79,8 @@
                     {!! Form::submit('Valider') !!}
                     {!! Form::close() !!}
 
-                   {{--<form>
+                    {{-- est équivalent à :
+                    <form>
                         <p><label>Email:</label><input type="text"></p>
                         <h3>commentaire:</h3>
                         <p><button>valider</button></p>

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Bienvenu à l\'AFUP')
+@section('title', 'Bienvenue aux conf\' de l\'AFUP')
 
 @section('content')
 

@@ -28,6 +28,11 @@ class BlogController extends Controller
         return view('blog.single', compact('post', 'comments'));
     }
 
+    public function contact()
+    {
+        return view('blog.contact');
+    }
+
     /**
      * public function showTag($id)
     {

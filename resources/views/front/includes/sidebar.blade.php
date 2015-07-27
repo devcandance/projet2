@@ -1,7 +1,15 @@
 <section id="sidebar">
     <h1>sponsors</h1>
-    <img class="logo" src="assets/images/logos/elao_logo_150px.png" >
-    <img class="logo" src="assets/images/logos/zol-logo.png" >
-    <img class="logo" src="assets/images/logos/logo-large.png" >
-    <img class="logo" src="assets/images/logos/Elephpant.png" >
+    <a href="http://www.elao.com/fr/">
+        <img class="logo" src="assets/images/logos/elao_logo_150px.png" />
+    </a>
+    <a href="http://www.elao.com/fr/">
+        <img class="logo" src="assets/images/logos/zol-logo.png" />
+    </a>
+    <a href="http://www.jolicode.com/">
+        <img class="logo" src="assets/images/logos/logo-large.png" />
+    </a>
+    <a href="http://www.http://php.net/">
+        <img class="logo" src="assets/images/logos/Elephpant.png" />
+    </a>
 </section>
