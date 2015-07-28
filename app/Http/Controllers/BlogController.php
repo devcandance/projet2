@@ -33,12 +33,11 @@ class BlogController extends Controller
         return view('blog.contact');
     }
 
-    /**
-     * public function showTag($id)
+    public function showTag($id)
     {
         $tag = Tag::find($id)->posts();
         return view('blog.tag', compact('tag'));
-    }*/
+    }
 
     /**
      * public function showComment($id)

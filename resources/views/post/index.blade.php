@@ -13,7 +13,12 @@
 
                 <thead>
                     <tr>
+                        <th>id</th>
+                        <th>status</th>
                         <th>title</th>
+                        <th>date début</th>
+                        <th>date fin</th>
+                        <th>mots clefs</th>
                         <th>edit</th>
                         <th>delete</th>
                     </tr>
@@ -22,12 +27,22 @@
                 <tbody>
                 @foreach($posts as $post)
                     <tr>
+                        <td>{{$post->id}}</td>
+                        <td>{{$post->status}}</td>
                         <td>{{$post->title}}</td>
 
+                        <td>{{$post->date_start}}</td>
+
+                        <td>{{$post->date_end}}</td>
+
                         <td>
-                            <button>
-                                <a href="{{url('post/'. $post->id)}}">EDIT</a>
-                            </button>
+                            @foreach($post->tags as $tag)
+                                <a href="{{url('tag'. $tag->id)}}">{{$tag->name}}</a>
+                            @endforeach
+                        </td>
+
+                        <td>
+                            <a href="{{url('post/'. $post->id . '/edit')}}">EDIT</a>
                         </td>
 
                         <td>
