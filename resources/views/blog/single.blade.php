@@ -41,19 +41,6 @@
                 </section>
 
                 <section>
-                    @if($post->comments)
-                        <ul>
-                        @foreach($post->comments as $c)
-                                <li>
-                                    <h2>{{$c->email}}</h2>
-                                    <p>{{$c->message}}</p>
-                                </li>
-                        @endforeach
-                        </ul>
-                    @endif
-                </section>
-
-                <aside>
                     <h2>Laisser un commentaire</h2>
 
                     {!! Form::open(['url'=>'comment']) !!} {{--balise d'ouverture, lancement du formulaire, en POST par défaut--}}
@@ -61,9 +48,9 @@
 
                     <div>
                         <p>
-                        {!! Form::label('email', 'Email:', ['for'=>'id_de_l_email']) !!}
-                        {!! Form::email('email', old('email'), ['id'=>'id_de_l_email', 'placeholder'=>'Votre email', 'required']) !!}
-                        {!! $errors->first('email', '<span class="help-block">: message</span>') !!}
+                            {!! Form::label('email', 'Email:', ['for'=>'id_de_l_email']) !!}
+                            {!! Form::email('email', old('email'), ['id'=>'id_de_l_email', 'placeholder'=>'Votre email', 'required']) !!}
+                            {!! $errors->first('email', '<span class="help-block">: message</span>') !!}
                         </p>
                     </div>
 
@@ -85,8 +72,25 @@
                         <h3>commentaire:</h3>
                         <p><button>valider</button></p>
                     </form>--}}
+                </section>
 
-                </aside>
+                <br />
+                <h2>Liste des commentaires</h2>
+
+                <section>
+                    @if($post->comments)
+                        <ul>
+                        @foreach($post->comments as $c)
+                                <li>
+                                    <h3>{{$c->email}}</h3>
+                                    <p>{{$c->message}}</p>
+                                    <br />
+                                </li>
+                        @endforeach
+                        </ul>
+                    @endif
+                </section>
+
             </div>
         @endif
     </div>

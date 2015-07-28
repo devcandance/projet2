@@ -17,7 +17,6 @@
         @else
             <a href="{{url('auth/login')}}">LogIN</a>
         @endif
-
     </nav>
 
 </header>

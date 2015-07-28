@@ -11,12 +11,11 @@ use App\Http\Controllers\Controller;
 class PostController extends Controller
 {
 
-    /**
-     * public function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->middleware('auth');
-    }*/
+    }
 
 
     public function index()
@@ -26,27 +25,25 @@ class PostController extends Controller
     }
 
 
-    /**
-     * public function show($id)
+    public function show($id)
     {
         $post = Post::find($id);
         return view('post.single', compact('post'));
-    }*/
+    }
 
-    /**
-     * public function create()
+    public function create()
     {
-        $categories = Category::all();
-        return view('post.create', compact('categories'));
+        $posts = Post::all();
+        return view('post.create', compact('posts'));
     }
 
     public function store(Request $request)
     {
         $post = Post::create($request->all());
 
-        if($request->hasFile('link_thumbnail'))
+        if($request->hasFile('thumbnail_link'))
         {
-            $file = $request->file('link_thumbnail');
+            $file = $request->file('thumbnail_link');
             $ext = $file->getClientOriginalExtension();
             $fileName = str_random(12) . '.' . $ext;
 
@@ -59,5 +56,17 @@ class PostController extends Controller
         // Post::create($request->all());
 
         return redirect()->to('post')->with('message', 'success');
-    }*/
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        Post::destroy($id);
+        return redirect()->to('post')->with('message', 'success');
+    }
 }

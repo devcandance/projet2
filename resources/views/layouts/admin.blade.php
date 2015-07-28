@@ -21,48 +21,31 @@
 
 <body>
 
-    <div class="header-container">
-        <header class="wrapper clearfix">
-
-            <h1 class="title"><a href="{{url('/')}}">Administre à Sion</a></h1>
-
-            <nav>
-                @include('dashboard.partials.menu')
-            </nav>
-
-        </header>
+<div class="header-container">
+    <div class="wrapper clearfix">
+        @include ('front.includes.header')
     </div>
+</div>
 
-    <div class=main-container">
-        <div class="main wrapper clearfix">
-
-            <section>
-                @yield('content')
-            </section>
-
-            <aside>
-                @section('sidebar')
-                    <h1>Sidebar</h1>
-                @if(!Auth::guest())
-                    <ul>
-                        <li>Hello {{Auth::user()->name}}</li>
-                        <li><a href="{{url('dashboard')}}">Dashboard</a></li>
-                        <li><a href="{{url('auth/logout')}}">LOGouT</a></li>
-                    </ul>
-                    @endif
-                @show
-            </aside>
-
+<div class=main-container">
+    <div class="main wrapper clearfix">
+        <div id="main" role="main">
+            @yield('content')
         </div>
     </div>
+</div>
 
-    <div class="footer-container">
-        <footer class="wrapper">
-            <ul>
-                <li><a href="#">mentions légales</a></li>
-            </ul>
-        </footer>
+<div class="main-container">
+    <div class="main wrapper clearfix">
+        @include ('front.includes.sidebar')
     </div>
+</div>
+
+<div class="footer-container">
+    <aside class="wrapper">
+        @include('front.includes.footer')
+    </aside>
+</div>
 
 </body>
 

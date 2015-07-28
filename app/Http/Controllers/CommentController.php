@@ -11,12 +11,11 @@ use phpDocumentor\Reflection\DocBlock\Tag\ReturnTag;
 
 class CommentController extends Controller
 {
-    /**
-     * public function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->middleware('auth', ['except'=>'show']);
-    }/*
+    }
 
     /**
      * Display a listing of the resource.
@@ -26,6 +25,7 @@ class CommentController extends Controller
     public function index()
     {
         $comments = Comment::all();
+
         $title = 'Liste des comment';
         return view('comment.index', compact('comments', 'title'));
     }
@@ -82,8 +82,6 @@ class CommentController extends Controller
      */
     public function update($id, Requests\CommentRequest $request)
     {
-        // echo "method update";
-        // dd($_POST);
         Comment::find($id)->update($request->all());
         return redirect()->to('comment')->with('message', 'success update');
     }
@@ -96,8 +94,6 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        // echo "method destroy";
-        // dd($_POST);
         Comment::destroy($id);
         return redirect()->to('comment')->with('message', 'success');
     }

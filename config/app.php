@@ -202,7 +202,7 @@ return [
          * Applications facades
          */
 
-        // 'MyHtml'      => App\Facades\MyHtml::class,
+        'MyHtml'      => App\Facades\MyHtml::class,
 
     ],
 

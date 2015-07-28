@@ -3,7 +3,7 @@
     <a href="http://www.elao.com/fr/">
         <img class="logo" src="assets/images/logos/elao_logo_150px.png" />
     </a>
-    <a href="http://www.elao.com/fr/">
+    <a href="http://www.zol.fr/">
         <img class="logo" src="assets/images/logos/zol-logo.png" />
     </a>
     <a href="http://www.jolicode.com/">

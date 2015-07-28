@@ -14,7 +14,6 @@
             <p>
                 {!! Form::label('email', 'Email:', ['for'=>'id_de_l_email']) !!}
                 {!! Form::email('email', old('email'), ['id'=>'id_de_l_email', 'placeholder'=>'Votre email', 'required']) !!}
-                {!! $errors->first('email', '<span class="help-block">: message</span>') !!}
             </p>
         </div>
 

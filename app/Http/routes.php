@@ -29,8 +29,8 @@ Route::get('single/{id}/{slug?}', 'BlogController@showPost');
 Route::get('tag/{id}', 'BlogController@showTag');
 Route::get('contact', 'BlogController@contact');
 
-// Route::get('/user', 'UserController@index');
-// Route::get('/user/{id}', 'UserController@show');
+Route::get('/user', 'UserController@index');
+Route::get('/user/{id}', 'UserController@show');
 
 
 /* -------------------------------------------- *\
