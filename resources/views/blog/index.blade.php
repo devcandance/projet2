@@ -38,7 +38,7 @@
 
                         <div class="link-keyword">Mots clefs :
                             @foreach($post->tags as $tag)
-                                <a href="{{url('tag'. $tag->id)}}">{{$tag->name}}</a>
+                                <a href="{{url('tag/'. $tag->id)}}">{{$tag->name}}</a>
                             @endforeach
                         </div>
 

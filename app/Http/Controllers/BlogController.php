@@ -33,10 +33,17 @@ class BlogController extends Controller
         return view('blog.contact');
     }
 
-    public function showTag($id)
+    public function showTag()
     {
-        $tag = Tag::find($id)->posts();
-        return view('blog.tag', compact('tag'));
+        $tags = Tag::all();
+        return view('blog.tag', compact('tags'));
+    }
+
+    public function showPostTag($id)
+    {
+        $tag = Tag::find($id);
+        $posts = Post::WhereRaw('status = ? AND id = ?', ['publish', (int)$id])->get();
+        return view('blog.tagle', compact('tag', 'posts'));
     }
 
     /**

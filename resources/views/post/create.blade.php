@@ -15,8 +15,8 @@
     </div>
 
     <div>
-        {!! MyHtml::radio('status', ['value' => 'publish']) !!}
-        {!! MyHtml::radio('status', ['value' => 'unpublish']) !!}
+        {!! MyHtml::radio('publier immédiatement', ['value' => 'publish']) !!}
+        {!! MyHtml::radio('publication en attente', ['value' => 'unpublish']) !!}
     </div>
 
     <div>

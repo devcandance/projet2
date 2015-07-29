@@ -14,7 +14,18 @@ class CommentController extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->middleware('auth', ['except'=>'show']);
+        $this->middleware('auth', ['except'=> ['create', 'store', 'show']]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        return view('comment.show');
     }
 
     /**
@@ -46,18 +57,7 @@ class CommentController extends Controller
     public function store(Requests\CommentRequest $request)
     {
         Comment::create($request->all());
-        return redirect()->to('comment');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        return view('comment.show');
+        return redirect()->to('comment/show');
     }
 
     /**
