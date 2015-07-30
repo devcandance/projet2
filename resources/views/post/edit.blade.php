@@ -4,15 +4,18 @@
 
     <div class="form-group">
 
-        {!! Form::open(['url'=>'post/'.$post->id, 'method'=>'PUT']) !!}
-    {{--{!! Form::email('email', $post->user_id) !!}--}}
-    {{--{!! $errors->first('email', ':message') !!}--}}
+        <section>
+            <h2>Corriger un post</h2>
 
-        {!! Form::textarea('content', $post->content) !!}
-        {!! $errors->first('content', ':message') !!}
+                {!! Form::open(['url'=>'post/'.$post->id, 'method'=>'PUT']) !!}
+            {{--{!! Form::email('email', $post->user_id) !!}--}}
+            {{--{!! $errors->first('email', ':message') !!}--}}
 
-        {!! Form::submit('update') !!}
-        {!! Form::close() !!}
+                {!! Form::textarea('content', $post->content) !!}
+                {!! $errors->first('content', ':message') !!}
+
+                {!! Form::submit('update') !!}
+                {!! Form::close() !!}
 
     </div>
 

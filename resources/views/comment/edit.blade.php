@@ -4,18 +4,19 @@
 
     <div class="form-group">
 
-        {!! Form::open(['url'=>'comment/'.$comment->id, 'method'=>'PUT']) !!}
-        {!! Form::email('email', $comment->email) !!}
-        {!! $errors->first('email', ':message') !!}
+        <section>
+            <h2>Modérer un commentaire</h2>
 
-        {!! Form::textarea('content', $comment->message) !!}
-        {!! $errors->first('content', ':message') !!}
+                {!! Form::open(['url'=>'comment/'.$comment->id, 'method'=>'PUT']) !!}
 
-        {!! Form::submit('update')  !!}
-        {!! Form::close() !!}
+                {!! Form::textarea('content', $comment->message) !!}
+                {!! $errors->first('content', ':message') !!}
+
+                {!! Form::submit('update')  !!}
+                {!! Form::close() !!}
+
+        </section>
 
     </div>
 
 @endsection
-
-

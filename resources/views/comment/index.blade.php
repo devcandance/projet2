@@ -16,8 +16,8 @@
                 {{--<th>id</th>
                 <th>status</th>--}}
                 <th>message</th>
-                <th>email</th>
-                {{--<th>date début</th>
+                {{--<th>email</th>
+                <th>date début</th>
                 <th>date fin</th>--}}
                 <th>moderate</th>
                 <th>delete</th>
@@ -30,9 +30,9 @@
                 {{--<td>{{$c->id}}</td>
                 <td>{{$c->status}}</td>--}}
                 <td>{{$c->message}}</td>
-                <td>{{$c->email}}</td>
+                {{--<td>{{$c->email}}</td>
 
-                {{--<td>{{$c->created_at}}</td>
+                <td>{{$c->created_at}}</td>
                 <td>{{$c->updated_at}}</td>--}}
 
                 <td>

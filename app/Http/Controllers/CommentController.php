@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use phpDocumentor\Reflection\DocBlock\Tag\ReturnTag;
 
 class CommentController extends Controller
 {
@@ -36,7 +35,7 @@ class CommentController extends Controller
     public function index()
     {
         $comments = Comment::all();
-        return view('comment.index', compact('comments', 'title'));
+        return view('comment.index', compact('comments'));
     }
 
     /**
@@ -52,9 +51,10 @@ class CommentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param  Request  $request
      * @return Response
      */
-    public function store(Requests\CommentRequest $request)
+    public function store(Request $request)
     {
         Comment::create($request->all());
         return redirect()->to('comment/show');
@@ -72,17 +72,20 @@ class CommentController extends Controller
         return view('comment.edit', compact('comment'));
     }
 
+
     /**
      * Update the specified resource in storage.
      *
+     * @param  Request  $request
      * @param  int  $id
      * @return Response
      */
-    public function update($id, Requests\CommentRequest $request)
+    public function update($id, Request $request)
     {
         Comment::find($id)->update($request->all());
         return redirect()->to('comment')->with('message', 'success update');
     }
+
 
     /**
      * Remove the specified resource from storage.

@@ -10,7 +10,6 @@ use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
-
     public function __construct()
     {
         parent::__construct();
@@ -37,6 +36,7 @@ class PostController extends Controller
         return view('post.create', compact('posts'));
     }
 
+
     public function store(Request $request)
     {
         $post = Post::create($request->all());
@@ -49,11 +49,11 @@ class PostController extends Controller
 
             $file->move('./upload', $fileName);
 
-            $post->link_thumbnail = $fileName; // deux lignes pour faire un update
+            $post->thumbnail_link = $fileName; // deux lignes pour faire un update
             $post->save();
         }
 
-        // Post::create($request->all());
+        Post::create($request->all());
 
         return redirect()->to('post')->with('message', 'success');
     }
@@ -75,10 +75,11 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      *
+     * @param  Request  $request
      * @param  int  $id
      * @return Response
      */
-    public function update($id, Requests\CommentRequest $request)
+    public function update($id, Request $request)
     {
         Post::find($id)->update($request->all());
         return redirect()->to('post')->with('message', 'success update');
