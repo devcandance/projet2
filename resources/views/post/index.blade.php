@@ -16,8 +16,8 @@
                         <th>id</th>
                         <th>status</th>
                         <th>title</th>
-                        <th>date début</th>
-                        <th>date fin</th>
+                        {{--<th>date début</th>
+                        <th>date fin</th>--}}
                         <th>mots clefs</th>
                         <th>edit</th>
                         <th>delete</th>
@@ -31,9 +31,8 @@
                         <td>{{$post->status}}</td>
                         <td>{{$post->title}}</td>
 
-                        <td>{{$post->date_start}}</td>
-
-                        <td>{{$post->date_end}}</td>
+                        {{--<td>{{$post->date_start}}</td>
+                        <td>{{$post->date_end}}</td>--}}
 
                         <td>
                             @foreach($post->tags as $tag)

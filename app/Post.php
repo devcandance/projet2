@@ -33,6 +33,17 @@ class Post extends Model
         return $this->hasMany('App\Comment');
     }
 
+    public function ComPub()
+    {
+        $comments = Comment::whereRaw('status = ? AND post_id = ?', ['publish', (int)$this->id])->get();
+        return $comments;
+    }
+
+    public function nbComPub()
+    {
+        return $this->ComPub()->count();
+    }
+
     /**
      * public function scopePublished($query, $id = null)
     {

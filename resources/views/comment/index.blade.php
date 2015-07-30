@@ -13,12 +13,12 @@
 
         <thead>
             <tr>
-                <th>id</th>
-                <th>status</th>
+                {{--<th>id</th>
+                <th>status</th>--}}
                 <th>message</th>
                 <th>email</th>
-                <th>date début</th>
-                <th>date fin</th>
+                {{--<th>date début</th>
+                <th>date fin</th>--}}
                 <th>moderate</th>
                 <th>delete</th>
             </tr>
@@ -27,14 +27,13 @@
         <tbody>
         @foreach($comments as $c)
             <tr>
-                <td>{{$c->id}}</td>
-                <td>{{$c->status}}</td>
+                {{--<td>{{$c->id}}</td>
+                <td>{{$c->status}}</td>--}}
                 <td>{{$c->message}}</td>
                 <td>{{$c->email}}</td>
 
-                <td>{{$c->created_at}}</td>
-
-                <td>{{$c->updated_at}}</td>
+                {{--<td>{{$c->created_at}}</td>
+                <td>{{$c->updated_at}}</td>--}}
 
                 <td>
                     <a href="{{url('comment/'. $c->id . '/edit')}}">MODERATE</a>

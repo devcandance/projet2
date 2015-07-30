@@ -8,7 +8,7 @@
         {!! Form::email('email', $comment->email) !!}
         {!! $errors->first('email', ':message') !!}
 
-        {!! Form::textarea('content', $comment->content) !!}
+        {!! Form::textarea('content', $comment->message) !!}
         {!! $errors->first('content', ':message') !!}
 
         {!! Form::submit('update')  !!}

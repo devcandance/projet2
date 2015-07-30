@@ -33,7 +33,7 @@
 
                         @if($post->url_site)
                                 <br />
-                            <a href="{{url($post->url_site)}}" class="link-outside">Site web de la conférence</a>
+                            <a href="{{url($post->url_site)}}"  target="_blank" class="link-outside">Site web de la conférence</a>
                         @endif
 
                         <div class="link-keyword">Mots clefs :
@@ -42,9 +42,13 @@
                             @endforeach
                         </div>
 
-                        @if(count($comments)>0)
-                            <p>Nombre de commentaires: {{$post->comments->count()}}</p>
+                        @if($post->nbComPub())
+                            <p>{{$post->nbComPub()}}</p>
                             @endif
+
+                        {{--@if(count($post->comments)>0)
+                            <p>Nombre de commentaires: {{$post->comments->count()}}</p>
+                            @endif--}}
 
                         @if($post->date_start)
                             <br />

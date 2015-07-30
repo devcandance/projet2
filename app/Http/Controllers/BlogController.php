@@ -17,15 +17,13 @@ class BlogController extends Controller
     public function index()
     {
         $posts = Post::all();
-        $comments = Comment::all();
-        return view('blog.index', compact('posts', 'comments'));
+        return view('blog.index', compact('posts'));
     }
 
     public function showPost($id)
     {
         $post = Post::find($id);
-        $comments = Comment::whereRaw('status = ? AND post_id = ?', ['publish', (int)$id])->get();
-        return view('blog.single', compact('post', 'comments'));
+        return view('blog.single', compact('post'));
     }
 
     public function contact()

@@ -26,7 +26,7 @@
                             <br />
 
                                 <p>
-                                    <a href="{{url($post->url_site)}}" class="link-outside">Site web de la conférence</a>
+                                    <a href="{{url($post->url_site)}}"  target="_blank" class="link-outside">Site web de la conférence</a>
                                 </p>
 
                             <div class="link-keyword">Mots clefs :
@@ -65,22 +65,15 @@
 
                     {!! Form::submit('Valider') !!}
                     {!! Form::close() !!}
-
-                    {{-- est équivalent à :
-                    <form>
-                        <p><label>Email:</label><input type="text"></p>
-                        <h3>commentaire:</h3>
-                        <p><button>valider</button></p>
-                    </form>--}}
                 </section>
 
                 <br />
                 <h2>Liste des commentaires</h2>
 
-                <section>
-                    @if($post->comments)
+                {{--<section>
+                    @if($comments)
                         <ul>
-                        @foreach($post->comments as $c)
+                        @foreach($comments as $c)
                                 <li>
                                     <h3>{{$c->email}}</h3>
                                     <p>{{$c->message}}</p>
@@ -89,7 +82,19 @@
                         @endforeach
                         </ul>
                     @endif
-                </section>
+                </section>--}}
+
+                @if($post->ComPub())
+                    <ul>
+                        @foreach($post->ComPub() as $c)
+                            <li>
+                                <h3>{{$c->email}}</h3>
+                                <p>{{$c->message}}</p>
+                                <br />
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
 
             </div>
         @endif
