@@ -49,6 +49,7 @@ class PostController extends Controller
         // $post = Post::create($request->all());
         $post = Post::create($champs); // on fait appel $champs qui équivaut déjà à $request->all()
         $post->tags()->attach($champs['tag_id']); // on demande à Laravel de rattacher aux tags de $post les tags sélectionnés (correspondant aux id de tag_id)
+        // dd($champs['url_site']);
 
         // gestion image
 

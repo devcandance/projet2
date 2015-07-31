@@ -19,6 +19,20 @@
             <br/>
 
             <div>
+                {!! Form::label('slug', 'Clef de référencement :', ['for'=>'slug']) !!}<br />
+                {!! Form::text('slug', '', ['id'=>'slug', 'required']) !!}
+            </div>
+
+            <br/>
+
+            <div>
+                {!! Form::label('url_site', 'Site web référent:', ['for'=>'url_site']) !!}<br />
+                {!! Form::text('url_site', '', ['id'=>'url_site', 'required']) !!}
+            </div>
+
+            <br/>
+
+            <div>
                 {!! Form::label('content', 'Contenu:') !!}<br />
                 {!! Form::textarea('content', '', ['cols'=>60, 'rows'=>20, 'id'=>'content']) !!}
             </div>

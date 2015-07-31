@@ -15,7 +15,9 @@ class Post extends Model
         'title',
         'content',
         'excerpt',
-        'status'
+        'slug',
+        'status',
+        'url_site'
     ];
 
     public function user()
