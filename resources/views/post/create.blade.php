@@ -27,7 +27,7 @@
 
             <div>
                 {!! Form::label('url_site', 'Site web référent:', ['for'=>'url_site']) !!}<br />
-                {!! Form::text('url_site', '', ['id'=>'url_site', 'required']) !!}
+                {!! Form::text('url_site', 'http://', ['id'=>'url_site', 'required']) !!}
             </div>
 
             <br/>
