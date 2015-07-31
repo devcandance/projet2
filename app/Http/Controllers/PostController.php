@@ -41,7 +41,16 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $post = Post::create($request->all());
+        $champs = $request->all();
+        $champs['excerpt'] = substr($champs['content'], 0, 60); // on créait une nouvelle rubrique "excerpt" et on la remplie avec un résumé
+        // var_dump($champs['tag_id']);
+        // dd($champs);
+
+        // $post = Post::create($request->all());
+        $post = Post::create($champs); // on fait appel $champs qui équivaut déjà à $request->all()
+        $post->tags()->attach($champs['tag_id']); // on demande à Laravel de rattacher aux tags de $post les tags sélectionnés (correspondant aux id de tag_id)
+
+        // gestion image
 
         if($request->hasFile('thumbnail_link'))
         {
@@ -49,11 +58,11 @@ class PostController extends Controller
             $ext = $file->getClientOriginalExtension();
             $fileName = str_random(12) . '.' . $ext;
 
-            $file->move('./assets/upload', $fileName);
+            $file->move('upload_thumb', $fileName);
 
             $post->thumbnail_link = $fileName; // deux lignes pour faire un update
+            $post->save();
         }
-        $post->save();
 
         return redirect()->to('post')->with('message', 'success');
     }

@@ -20,7 +20,7 @@
 
             <div>
                 {!! Form::label('content', 'Contenu:') !!}<br />
-                {!! Form::textarea('content', '', ['cols'=>30, 'rows'=>10, 'id'=>'content']) !!}
+                {!! Form::textarea('content', '', ['cols'=>60, 'rows'=>20, 'id'=>'content']) !!}
             </div>
 
             <br/>
@@ -34,8 +34,10 @@
             <br/>
 
             {{--<div>
-                {!! Form::label('date_start', 'Date de début :',['for'=> 'date_start']) !!}{!! Form::text('date_start','',['class'=>'form-control', 'id'=>'date_start', 'placeholder'=>'Choisissez votre date', 'required']) !!}<br/>
-                {!! Form::label('date_end', 'Date de fin :',['for'=> 'date_end']) !!}{!! Form::text('date_end','',['class'=>'form-control', 'id'=>'date_end', 'placeholder'=>'Choisissez votre date', 'required']) !!}<br/>
+                {!! Form::label('date_start', 'Date de début :',['for'=> 'date_start']) !!}
+                {!! Form::text('date_start','',['class'=>'form-control', 'id'=>'date_start', 'placeholder'=>'Choisissez votre date', 'required']) !!}<br/>
+                {!! Form::label('date_end', 'Date de fin :',['for'=> 'date_end']) !!}
+                {!! Form::text('date_end','',['class'=>'form-control', 'id'=>'date_end', 'placeholder'=>'Choisissez votre date', 'required']) !!}<br/>
             </div>--}}
 
             <div>
@@ -49,8 +51,8 @@
                 @if($tags)
                     @foreach($tags as $tag)
                         <p>
-                            {!!Form::checkbox('tag_id[]', $tag->id,false,['title'=> $tag->name])!!}
-                            {!!Form::label('tag_id',ucfirst($tag->name), ['title'=> $tag->name])!!}
+                            {!!Form::checkbox('tag_id[]', $tag->id, false, ['title'=> $tag->name])!!}
+                            {!!Form::label('tag_id', ucfirst($tag->name), ['title'=> $tag->name])!!}
                         </p>
                     @endforeach
                 @endif
