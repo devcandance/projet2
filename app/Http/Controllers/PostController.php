@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Tag;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -20,7 +21,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('post.index', compact('posts', 'tags'));
+        return view('post.index', compact('posts'));
     }
 
 
@@ -30,10 +31,11 @@ class PostController extends Controller
         return view('post.single', compact('post'));
     }
 
+
     public function create()
     {
-        $posts = Post::all();
-        return view('post.create', compact('posts'));
+        $tags = Tag::all();
+        return view('post.create', compact('tags'));
     }
 
 
@@ -47,13 +49,11 @@ class PostController extends Controller
             $ext = $file->getClientOriginalExtension();
             $fileName = str_random(12) . '.' . $ext;
 
-            $file->move('./upload', $fileName);
+            $file->move('./assets/upload', $fileName);
 
             $post->thumbnail_link = $fileName; // deux lignes pour faire un update
-            $post->save();
         }
-
-        Post::create($request->all());
+        $post->save();
 
         return redirect()->to('post')->with('message', 'success');
     }

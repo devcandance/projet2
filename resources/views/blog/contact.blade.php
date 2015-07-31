@@ -26,7 +26,7 @@
             {!! $errors->first('message', '<span class="help-block">: message</span>') !!}
         </div>
 
-        {!! Form::submit('Valider') !!}
+    {{--{!! Form::submit('Valider') !!}--}}
         {!! Form::close() !!}
     </aside>
 

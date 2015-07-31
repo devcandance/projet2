@@ -11,6 +11,14 @@
             {{--{!! Form::email('email', $post->user_id) !!}--}}
             {{--{!! $errors->first('email', ':message') !!}--}}
 
+            <div>
+                {!! Form::label('title', 'Titre:') !!}<br />
+                {!! Form::text('title', $post->title) !!}
+            </div>
+
+            <br/>
+
+                {!! Form::label('content', 'Contenu:') !!}<br />
                 {!! Form::textarea('content', $post->content) !!}
                 {!! $errors->first('content', ':message') !!}
 
