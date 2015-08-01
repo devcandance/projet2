@@ -19,7 +19,7 @@
             <br/>
 
             <div>
-                {!! Form::label('slug', 'Clef de référencement :', ['for'=>'slug']) !!}<br />
+                {!! Form::label('slug', 'Clef référencement:', ['for'=>'slug']) !!}<br />
                 {!! Form::text('slug', '', ['id'=>'slug', 'required']) !!}
             </div>
 
@@ -47,12 +47,14 @@
 
             <br/>
 
-            {{--<div>
+            <div>
                 {!! Form::label('date_start', 'Date de début :',['for'=> 'date_start']) !!}
-                {!! Form::text('date_start','',['class'=>'form-control', 'id'=>'date_start', 'placeholder'=>'Choisissez votre date', 'required']) !!}<br/>
+                {!! Form::text('date_start','',['placeholder'=>'format: aaaa-mm-jj hh:mm:ss', 'required']) !!}
                 {!! Form::label('date_end', 'Date de fin :',['for'=> 'date_end']) !!}
-                {!! Form::text('date_end','',['class'=>'form-control', 'id'=>'date_end', 'placeholder'=>'Choisissez votre date', 'required']) !!}<br/>
-            </div>--}}
+                {!! Form::text('date_end','',['placeholder'=>'format: aaaa-mm-jj hh:mm:ss', 'required']) !!}
+            </div>
+
+            <br/>
 
             <div>
                 {!! MyHtml::thumb('Image d\'illustration', ['name'=>'thumbnail_link']) !!}

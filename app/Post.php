@@ -17,7 +17,9 @@ class Post extends Model
         'excerpt',
         'slug',
         'status',
-        'url_site'
+        'url_site',
+        'date_start',
+        'date_end'
     ];
 
     public function user()
