@@ -83,7 +83,7 @@ class CommentController extends Controller
     public function update($id, Request $request)
     {
         Comment::find($id)->update($request->all());
-        return redirect()->to('comment')->with('message', 'success update');
+        //dd($request->all());
     }
 
 

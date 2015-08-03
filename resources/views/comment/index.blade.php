@@ -47,6 +47,9 @@
         </tbody>
 
     </table>
+
+@else
+    <p>pas de contenu !</p>
 @endif
 
 @endsection

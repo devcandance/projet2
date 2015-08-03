@@ -42,22 +42,23 @@
             <div>
                 {!! MyHtml::radio('status',['value'=>'publish','title'=>'publier immédiatement:'])!!}
                 <br/>
-                {!! MyHtml::radio('status',['value'=>'unpublish','title'=>'publication en attente','checked'])!!}
+                {!! MyHtml::radio('status',['value'=>'unpublish','title'=>'publication en attente'])!!}
             </div>
 
             <br/>
 
             <div>
-                {!! Form::label('date_start', 'Date de début :',['for'=> 'date_start']) !!}
+                {!! Form::label('date_start', 'Date de début:',['for'=> 'date_start']) !!}
                 {!! Form::text('date_start','',['placeholder'=>'format: aaaa-mm-jj hh:mm:ss', 'required']) !!}
-                {!! Form::label('date_end', 'Date de fin :',['for'=> 'date_end']) !!}
+                {!! Form::label('date_end', 'Date de fin:',['for'=> 'date_end']) !!}
                 {!! Form::text('date_end','',['placeholder'=>'format: aaaa-mm-jj hh:mm:ss', 'required']) !!}
             </div>
 
             <br/>
 
             <div>
-                {!! MyHtml::thumb('Image d\'illustration', ['name'=>'thumbnail_link']) !!}
+                {!! Form::label('content', 'Image d\'illustration: ') !!}
+                {!! Form::file('thumbnail_link') !!}
             </div>
 
             <br/>

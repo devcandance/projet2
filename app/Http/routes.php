@@ -58,6 +58,7 @@ Route::get('dashboard', 'Admin\DashboardController@index');
 
 Route::resource('comment', 'CommentController');
 Route::resource('post', 'PostController');
+Route::resource('mail', 'MailController');
 
 
 

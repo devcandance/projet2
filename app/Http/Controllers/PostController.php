@@ -39,7 +39,7 @@ class PostController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(Requests\PostRequest $request)
     {
         $champs = $request->all();
         $champs['excerpt'] = substr($champs['content'], 0, 60); // on créait une nouvelle rubrique "excerpt" et on la remplie avec un résumé
@@ -89,7 +89,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id, Request $request)
+    public function update($id, Requests\PostRequest $request)
     {
         Post::find($id)->update($request->all());
         return redirect()->to('post')->with('message', 'success update');

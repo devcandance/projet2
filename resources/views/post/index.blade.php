@@ -55,10 +55,7 @@
             </table>
 
 @else
-    <p>désolé pas de contenu du tout du tout !</p>
+    <p>pas de contenu !</p>
 @endif
-
-
-</table>
 
 @endsection

@@ -24,8 +24,13 @@ class PostRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required|title',
+            'title' => 'required',
             'content' => 'required',
+            'slug' => 'required',
+            'url_site' => 'required',
+            'date_start' => 'required',
+            'date_end' => 'required',
+            'thumbnail_link' => 'required'
         ];
     }
 }

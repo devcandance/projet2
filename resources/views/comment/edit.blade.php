@@ -7,13 +7,15 @@
         <section>
             <h2>Modérer un commentaire</h2>
 
+            <div>
                 {!! Form::open(['url'=>'comment/'.$comment->id, 'method'=>'PUT']) !!}
 
-                {!! Form::textarea('content', $comment->message) !!}
-                {!! $errors->first('content', ':message') !!}
+                {!! Form::label('content', 'Contenu:') !!}<br />
+                {!! Form::textarea('content', $comment->message, ['cols'=>60, 'rows'=>20, 'id'=>'content']) !!}
 
                 {!! Form::submit('update')  !!}
                 {!! Form::close() !!}
+            </div>
 
         </section>
 

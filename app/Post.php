@@ -47,13 +47,4 @@ class Post extends Model
     {
         return $this->ComPub()->count();
     }
-
-    /**
-     * public function scopePublished($query, $id = null)
-    {
-        if (is_null($id))
-            return $query->where('status', '=', 'publish');
-
-        return $query->whereRaw('status=? AND id=?', ['publish', (int)$id]);
-    }*/
 }
