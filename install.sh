@@ -12,6 +12,8 @@ echo "GRANT ALL PRIVILEGES ON conference.* to 'tony'@'localhost' IDENTIFIED BY '
 
 # MIGRATION LARAVEL
 
+# composer install
+
 php artisan migrate:refresh --seed
 
 php artisan db:seed --class=MailTableSeeder
