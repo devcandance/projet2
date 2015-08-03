@@ -4,8 +4,9 @@
 
 @section('content')
 
-    <p><a href="{{url('post/create')}}">create</a></p>
+    <h2>Liste des posts</h2>
 
+    <br/>
 
     @if(count($posts)>0)
 
@@ -57,5 +58,7 @@
 @else
     <p>pas de contenu !</p>
 @endif
+
+<p><a href="{{url('post/create')}}">créer un nouveau post</a></p>
 
 @endsection

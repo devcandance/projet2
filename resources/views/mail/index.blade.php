@@ -4,6 +4,7 @@
 
 @section('content')
 
+    <h2>Liste des mails reçus</h2>
 
     @if(count($mails)>0)
 

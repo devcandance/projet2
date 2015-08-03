@@ -43,7 +43,7 @@
                         </div>
 
                         @if($post->nbComPub())
-                            <p>{{$post->nbComPub()}}</p>
+                            <p>Nombre de commentaires: {{$post->nbComPub()}}</p>
                             @endif
 
                         {{--@if(count($post->comments)>0)
