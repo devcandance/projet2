@@ -26,6 +26,7 @@ class PostRequest extends Request
         return [
             'title' => 'required',
             'content' => 'required',
+            'excerpt' => 'required',
             'slug' => 'required',
             'url_site' => 'required',
             'date_start' => 'required',

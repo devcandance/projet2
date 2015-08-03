@@ -9,6 +9,7 @@ class Comment extends Model
     protected $fillable=[
         'message',
         'status',
+        'spam',
     ];
 
     public function user()

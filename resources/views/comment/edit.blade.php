@@ -8,10 +8,10 @@
             <h2>Modérer un commentaire</h2>
 
             <div>
-                {!! Form::open(['url'=>'comment/'.$comment->id, 'method'=>'PUT']) !!}
+                {!! Form::open(['url'=>'comment', 'method'=>'GET']) !!}
 
-                {!! Form::label('content', 'Contenu:') !!}<br />
-                {!! Form::textarea('content', $comment->message, ['cols'=>60, 'rows'=>20, 'id'=>'content']) !!}
+                {!! Form::label('message', 'Contenu:') !!}<br />
+                {!! Form::textarea('message', $comment->message, ['cols'=>60, 'rows'=>20, 'id'=>'content']) !!}
 
                 {!! Form::submit('update')  !!}
                 {!! Form::close() !!}

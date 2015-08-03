@@ -30,7 +30,8 @@ Route::get('single/{id}/{slug?}', 'BlogController@showPost');
 Route::get('tag/{id}', 'BlogController@showPostTag');
 Route::get('tag', 'BlogController@showTag');
 
-Route::get('contact', 'BlogController@contact');
+// Route::get('contact', 'BlogController@contact');
+Route::get('contact', 'MailController@create');
 
 Route::get('/user', 'UserController@index');
 Route::get('/user/{id}', 'UserController@show');

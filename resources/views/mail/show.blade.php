@@ -4,7 +4,7 @@
 
     <header>
         <h2>
-            Mail supprimé
+            Opération mail validée
         </h2>
     </header>
 

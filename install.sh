@@ -15,3 +15,5 @@ echo "GRANT ALL PRIVILEGES ON conference.* to 'tony'@'localhost' IDENTIFIED BY '
 php artisan migrate:refresh --seed
 
 php artisan db:seed --class=MailTableSeeder
+
+# php artisan serv

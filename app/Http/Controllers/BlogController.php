@@ -25,10 +25,11 @@ class BlogController extends Controller
         return view('blog.single', compact('post'));
     }
 
-    public function contact()
+    /**
+     * public function contact()
     {
         return view('blog.contact');
-    }
+    }*/
 
     public function showTag()
     {
